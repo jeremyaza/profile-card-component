@@ -6,7 +6,7 @@ Challenge by Frontend Mentor 💻
 
 ## Live Application URL ✨
 
-The Application is deployed in 
+The Application is deployed in https://profile-card-jeremy.netlify.app/
 
 Click on the link to see the web
 
