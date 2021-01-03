@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.content_main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #19a2ae;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.content_main .top {
+  position: absolute;
+  left: -25%;
+  top: -80%;
+  z-index: -1;
+}
+
+.content_main .bottom {
+  position: absolute;
+  right: -20%;
+  bottom: -100%;
+  z-index: -1;
+}
+
+.content_component {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  width: 340px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.content_component .header_component {
+  position: relative;
+  height: 140px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background: url("../img/bg-pattern-card.svg");
+}
+
+.content_component .header_component .user {
+  border-radius: 100px;
+  border: 6px solid white;
+  position: absolute;
+  left: 50%;
+  bottom: -40%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.content_component .content_component {
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.content_component .content_component .data_user {
+  margin-top: 3em;
+  padding: 1em 0 2em 0;
+}
+
+.content_component .content_component .data_user .name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #2d3248;
+  padding: 0.5rem 0;
+}
+
+.content_component .content_component .data_user .name span {
+  font-weight: 400;
+  font-size: 16px;
+  color: #6a6f81;
+}
+
+.content_component .content_component .data_user .city {
+  font-weight: 400;
+  font-size: 14px;
+  color: #6a6f81;
+}
+
+.content_component .content_component .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 0.2px solid #cecece;
+  width: 100%;
+  padding: 1.5em 1em;
+  font-size: 18px;
+}
+
+.content_component .content_component .stats .followers p,
+.content_component .content_component .stats .likes p,
+.content_component .content_component .stats .photos p {
+  font-weight: 700;
+  color: #2d3248;
+}
+
+.content_component .content_component .stats .followers span,
+.content_component .content_component .stats .likes span,
+.content_component .content_component .stats .photos span {
+  font-weight: 400;
+  color: #6a6f81;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (max-width: 575px) {
+  .content_main .top {
+    left: -150%;
+    top: -100%;
+  }
+  .content_main .bottom {
+    right: -140%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .content_main .top {
+    left: -95%;
+    top: -100%;
+  }
+  .content_main .bottom {
+    right: -95%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .content_main .top {
+    left: -50%;
+    top: -100%;
+  }
+  .content_main .bottom {
+    right: -60%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .content_main .top {
+    left: -30%;
+    top: -100%;
+  }
+  .content_main .bottom {
+    right: -38%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

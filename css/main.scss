@@ -1,0 +1,173 @@
+@import "./mixin.scss";
+@import "./variables.scss";
+
+//General
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.content_main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $Dark-cyan;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  .top {
+    position: absolute;
+    left: -25%;
+    top: -80%;
+    z-index: -1;
+  }
+  .bottom {
+    position: absolute;
+    right: -20%;
+    bottom: -100%;
+    z-index: -1;
+  }
+}
+
+.content_component {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  width: 340px;
+  text-align: center;
+  border-radius: 10px;
+  .header_component {
+    position: relative;
+    height: 140px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background: url("../img/bg-pattern-card.svg");
+    .user {
+      border-radius: 100px;
+      border: 6px solid white;
+      position: absolute;
+      left: 50%;
+      bottom: -40%;
+      transform: translateX(-50%);
+    }
+  }
+  .content_component {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    .data_user {
+      margin-top: 3em;
+      padding: 1em 0 2em 0;
+      .name {
+        font-weight: 700;
+        font-size: 18px;
+        color: $Very-dark-desaturated-blue;
+        padding: 0.5rem 0;
+        span {
+          font-weight: 400;
+          font-size: 16px;
+          color: $Dark-grayish-blue;
+        }
+      }
+      .city {
+        font-weight: 400;
+        font-size: 14px;
+        color: $Dark-grayish-blue;
+      }
+    }
+    .stats {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      border-top: 0.2px solid rgb(206, 206, 206);
+      width: 100%;
+      padding: 1.5em 1em;
+      font-size: 18px;
+      .followers,
+      .likes,
+      .photos {
+        p {
+          font-weight: 700;
+          color: $Very-dark-desaturated-blue;
+        }
+        span {
+          font-weight: 400;
+          color: $Dark-grayish-blue;
+          font-size: 11px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+//Responsive
+@include breakpoint(xs) {
+  .content_main {
+    .top {
+      left: -150%;
+      top: -100%;
+    }
+    .bottom {
+      right: -140%;
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .content_main {
+    .top {
+      left: -95%;
+      top: -100%;
+    }
+    .bottom {
+      right: -95%;
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .content_main {
+    .top {
+      left: -50%;
+      top: -100%;
+    }
+    .bottom {
+      right: -60%;
+    }
+  }
+}
+
+@include breakpoint(lg) {
+  .content_main {
+    .top {
+      left: -30%;
+      top: -100%;
+    }
+    .bottom {
+      right: -38%;
+    }
+  }
+}
